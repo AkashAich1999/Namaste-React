@@ -23,9 +23,9 @@ const number = 770;
 // Component Composition
 const HeadingComponent = () => (
     <div className="container">
-        {title}
-        <h1>{number + 7}</h1>
+        {Title()}
         <Title />
+        <Title></Title>
         <h1 className="heading">Namaste React Functional Component !</h1>
     </div>
 );
