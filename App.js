@@ -36,47 +36,46 @@ const Header = () => {
     );
 }
 
-// JavaScript Object with a Single Property & Value
-// const styleCard = {
-//     backgroundColor: "#f0f0f0"
-// }
-
-const RestaurantCard = () => {
+const RestaurantCard = ({resName, cuisine}) => {
     return(
         <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
             <img
              className="res-logo"
              alt="res-logo" 
-             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/559086f6b0c59b7e4f1cd44b0aa6d367" 
+             src="https://b.zmtcdn.com/data/pictures/chains/0/18371310/ff149f65ad165478dbccf89a5332dd32.jpg?fit=around|750:500&crop=750:500;*,*" 
              />
-            <h3>The Big F</h3>
-            <h4>Snacks, Beverages</h4>
+            <h3>{resName}</h3>
+            <h4>{cuisine}</h4>
             <h4>4.2 Stars</h4>
             <h4>46 mins</h4>
         </div>
     );
 }
 
-
 const Body = () => {
     return(
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
+                <RestaurantCard 
+                    resName="Behrouz Biryani"
+                    cuisine="Biryani, North Indian, Kebabs, Mughlai, Beverages"
+                />
+                <RestaurantCard 
+                    resName="La Pino'z Pizza" 
+                    cuisine="Pizzas, Pastas, Italian, Desserts, Beverages"/>
+                <RestaurantCard 
+                    resName="KFC" 
+                    cuisine="American, Snacks"/>
+                <RestaurantCard 
+                    resName="McDonald's" 
+                    cuisine="Burger, Beverages, Cafe, Desserts"/>
                 <RestaurantCard />
                 <RestaurantCard />
                 <RestaurantCard />
                 <RestaurantCard />
                 <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                <RestaurantCard /> 
             </div>
         </div>
     );
