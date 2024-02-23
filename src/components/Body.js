@@ -4,32 +4,7 @@ import { useState } from "react";
 
 const Body = () => {
   // Local State Variable
-  const [ListOfRestaurants, setListOfRestaurants] = useState([
-    {
-      type: "restaurant",
-      data: {
-        id: "334475",
-        name: "KFC",
-        cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-        costForTwo: 40000,
-        deliveryTime: 36,
-        avgRating: "3.8",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        id: "334477",
-        name: "Domino's",
-        cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        cuisines: ["Pizza", "Beverages"],
-        costForTwo: 40000,
-        deliveryTime: 36,
-        avgRating: "4.3",
-      },
-    },
-  ]);
+  const [ListOfRestaurants, setListOfRestaurants] = useState(resList);
 
   // Normal JavaScript Variable
   // let ListOfRestaurantsJS = [
