@@ -6,6 +6,10 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // Local State Variable
   const [ListOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [searchText, setSearchText] = useState("");
+
+  // Whenever 'State Variables' Update, React Triggers a Reconciliation Cycle' (Re-Renders the Component).
+  console.log("Body Rendered");
 
   // Normal JavaScript Variable
   // let ListOfRestaurantsJS = [
@@ -61,6 +65,21 @@ const Body = () => {
     (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+           type="text" 
+           className="search-box" 
+           value={searchText} 
+           onChange={(e) => {
+              setSearchText(e.target.value);
+           }} />
+          <button
+           onClick={() => {
+            // Filter the Restaurant Cards & Update the UI.
+            // searchText
+            console.log(searchText);
+          }}>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
