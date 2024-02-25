@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // Local State Variable
@@ -46,7 +47,11 @@ const Body = () => {
     const json = await data.json();
 
     console.log(json);
-    // setListOfRestaurants(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    // setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants.info);
+  };
+
+  if(ListOfRestaurants.length === 0){
+    return <Shimmer />;
   }
 
   return (
