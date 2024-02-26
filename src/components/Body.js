@@ -78,6 +78,10 @@ const Body = () => {
             // Filter the Restaurant Cards & Update the UI.
             // searchText
             console.log(searchText);
+
+            const filteredRestaurant = ListOfRestaurants.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase()));
+
+            setListOfRestaurants(filteredRestaurant);
           }}>Search</button>
         </div>
         <button
