@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // Local State Variable
   const [ListOfRestaurants, setListOfRestaurants] = useState(resList);
+  // const [filteredRestaurants, setFilteredRestaurants] = useState(resList);
   const [searchText, setSearchText] = useState("");
 
   // Whenever 'State Variables' Update, React Triggers a Reconciliation Cycle' (Re-Renders the Component).
@@ -82,6 +83,7 @@ const Body = () => {
             const filteredRestaurant = ListOfRestaurants.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase()));
 
             setListOfRestaurants(filteredRestaurant);
+            // setFilteredRestaurants(filteredRestaurant);
           }}>Search</button>
         </div>
         <button
